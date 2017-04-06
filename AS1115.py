@@ -3,6 +3,7 @@
 # AS1115
 # This code is designed to work with the AS1115_I2CL_3CE I2C Mini Module available from ControlEverything.com.
 # https://www.controleverything.com/content/LED-Display?sku=AS1115_I2CL_3CE#tabs-0-product_tabset-2
+# NT
 
 import smbus
 import time
