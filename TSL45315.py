@@ -3,6 +3,7 @@
 # TSL45315
 # This code is designed to work with the TSL45315_IS2C I2C Mini Module available from ControlEverything.com.
 # https:#www.controleverything.com/content/Light?sku=TSL45315_I2CS#tabs-0-product_tabset-2
+# NT
 
 import smbus
 import time
