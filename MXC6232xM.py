@@ -3,6 +3,7 @@
 # MXC6232xM
 # This code is designed to work with the MXC6232xM_I2CS I2C Mini Module available from ControlEverything.com.
 # https://www.controleverything.com/content/Accelorometer?sku=MXC6232xM_I2CS#tabs-0-product_tabset-2
+# NT
 
 import smbus
 import time
