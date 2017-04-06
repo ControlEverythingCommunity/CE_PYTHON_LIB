@@ -3,6 +3,7 @@
 # HTU20D
 # This code is designed to work with the SHT30_I2CS I2C Mini Module available from ControlEverything.com.
 # https://www.controleverything.com/content/Temperature?sku=HTU20D_I2CS#tabs-0-product_tabset-2
+# NT
 
 import smbus
 import time
