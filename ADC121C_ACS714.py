@@ -3,6 +3,7 @@
 # ADC121C_ACS714
 # This code is designed to work with the ADC121C_I2CS_ACS714 I2C Mini Module available from ControlEverything.com.
 # https://www.controleverything.com/content/Hall-Effect?sku=ADC121C_I2CS_ACS714#tabs-0-product_tabset-2
+# NT
 
 import smbus
 import time
