@@ -3,6 +3,7 @@
 # TMD2671
 # This code is designed to work with the TMD2671_I2CS I2C Mini Module available from ControlEverything.com.
 # https://www.controleverything.com/products
+# NT
 
 import smbus
 import time
