@@ -3,6 +3,7 @@
 # HIH9130
 # This code is designed to work with the HIH9130_I2CS I2C Mini Module available from ControlEverything.com.
 # https://shop.controleverything.com/products/humidity-and-temperature-sensor-1-7-rh-0-6-c#tabs-0-product_tabset-2
+# NT
 
 import smbus
 import time
