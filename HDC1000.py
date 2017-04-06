@@ -3,6 +3,7 @@
 # HDC1000
 # This code is designed to work with the HDC1000_I2CS I2C Mini Module available from ControlEverything.com.
 # https://www.controleverything.com/content/Temperature?sku=HDC1000_I2CS#tabs-0-product_tabset-2
+# NT
 
 import smbus
 import time
