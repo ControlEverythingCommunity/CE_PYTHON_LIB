@@ -3,6 +3,7 @@
 # TCS34725
 # This code is designed to work with the TCS34725_I2CS I2C Mini Module available from ControlEverything.com.
 # https://www.controleverything.com/products
+# NT
 
 import smbus
 import time
