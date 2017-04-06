@@ -3,6 +3,7 @@
 # HIH6130
 # This code is designed to work with the HIH6130_I2CS I2C Mini Module available from ControlEverything.com.
 # https://www.controleverything.com/content/Temperature?sku=HIH6130_I2CS#tabs-0-product_tabset-2
+# NT
 
 import smbus
 import time
