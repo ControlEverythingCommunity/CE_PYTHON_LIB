@@ -67,19 +67,19 @@ class LT_1PA01():
 		"""Select the Proximity Configuration register configuration from the given provided values"""
 		CONFIG0 = (LT_1PA01_REG_CONFIG0_PROX_EN_ENABLE | LT_1PA01_REG_CONFIG0_PROX_SLP_800MS | LT_1PA01_REG_CONFIG0_IRDR_DRV_3_6MA)
 		bus.write_byte_data(LT_1PA01_DEFAULT_ADDRESS, LT_1PA01_REG_ALSPROX_CONFIG0, CONFIG0)
-    
-        """Select the Proximity/ALS Configuration register configuration from the given provided values"""
-        CONFIG1 = (LT_1PA01_REG_CONFIG1_INT_ALG_HYST | LT_1PA01_REG_CONFIG1_PROX_OFFSET_DISABLE | LT_1PA01_REG_CONFIG1_ALS_EN_ENABLE | LT_1PA01_REG_CONFIG1_ALS_RANGE_2000LX)
-        bus.write_byte_data(LT_1PA01_DEFAULT_ADDRESS, LT_1PA01_REG_ALSPROX_CONFIG1, CONFIG1)
+		
+		"""Select the Proximity/ALS Configuration register configuration from the given provided values"""
+        	CONFIG1 = (LT_1PA01_REG_CONFIG1_INT_ALG_HYST | LT_1PA01_REG_CONFIG1_PROX_OFFSET_DISABLE | LT_1PA01_REG_CONFIG1_ALS_EN_ENABLE | LT_1PA01_REG_CONFIG1_ALS_RANGE_2000LX)
+        	bus.write_byte_data(LT_1PA01_DEFAULT_ADDRESS, LT_1PA01_REG_ALSPROX_CONFIG1, CONFIG1)
 
 	def readluminance(self):
 		"""Read data back from LT_1PA01_REG_ALSPROX_PROX_DATA(0x0A), 3 bytes, Proximity, ALS MSB, ALS LSB"""
 		data = bus.read_i2c_block_data(LT_1PA01_DEFAULT_ADDRESS, LT_1PA01_REG_ALSPROX_PROX_DATA, 3)
 		
 		# Convert the data
-        # Convert the data
-        proximity = data[0]
-        luminance = data[1] * 256 + data[2]
+        	# Convert the data
+        	proximity = data[0]
+        	luminance = data[1] * 256 + data[2]
 		
 		return {'l' : luminance, 'p' : proximity}
 
