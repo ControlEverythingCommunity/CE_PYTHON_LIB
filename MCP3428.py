@@ -31,6 +31,14 @@ MCP3428_CMD_GAIN_8					= 0x03 # PGA Gain = 8V/V
 MCP3428_CMD_READ_CNVRSN				= 0x00 # Read Conversion Result Data
 
 class MCP3428():
+    def set_channel(self):
+        """Select the Channel user want to use from 1-4"""
+        self.channel = int(input("Enter the Channel No. = "))
+        while self.channel < 1 or self.channel > 4:
+            self.channel = int(input("Enter the Channel No. = "))
+                
+        return self.channel
+    
 	def config_command(self):
 		"""Select the Configuration Command from the given provided values"""
 		if self.channel == 1:
@@ -60,11 +68,10 @@ from MCP3428 import MCP3428
 mcp3428 = MCP3428()
 
 while True :
-	for i in range(1, 4) :
-		self.channel = i
-		mcp3428.config_command()
-		time.sleep(0.1)
-		adc = mcp3428.read_adc()
-		print "Digital Value of Analog Input : %d "%(adc['r'])
-		print " ********************************* "
-		time.sleep(0.8)
+    mcp3428.set_channel()
+    mcp3428.config_command()
+    time.sleep(0.1)
+    adc = mcp3428.read_adc()
+    print "Digital Value of Analog Input : %d "%(adc['r'])
+    print " ********************************* "
+    time.sleep(0.8)
