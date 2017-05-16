@@ -11,7 +11,7 @@ import smbus
 bus = smbus.SMBus(1)
 
 # I2C address of the device
-24AA128_DEFAULT_ADDRESS			= 0x50
+_24AA128_DEFAULT_ADDRESS			= 0x50
 
 class 24AA128():
 	def select_address(self):
@@ -35,20 +35,20 @@ class 24AA128():
 	
 	def write_data(self):
 		"""Write the given data on the given address by the user"""
-		bus.write_i2c_block_data(24AA128_DEFAULT_ADDRESS, self.addressbyte1, [self.addressbyte2, self.data])
+		bus.write_i2c_block_data(_24AA128_DEFAULT_ADDRESS, self.addressbyte1, [self.addressbyte2, self.data])
 	
 	def select_readaddress(self):
 		"""Read the given provided data by the user"""
-		bus.write_i2c_block_data(24AA128_DEFAULT_ADDRESS, self.addressbyte1, [self.addressbyte2])
+		bus.write_i2c_block_data(_24AA128_DEFAULT_ADDRESS, self.addressbyte1, [self.addressbyte2])
 	
 	def read_data(self):
 		"""Read the data back from the device address"""
-		data = bus.read_byte(24AA128_DEFAULT_ADDRESS)
+		data = bus.read_byte(_24AA128_DEFAULT_ADDRESS)
 		
 		return {'d' : data}
 
-from 24AA128 import 24AA128
-_24AA128 = 24AA128()
+from _24AA128 import _24AA128
+_24AA128 = _24AA128()
 
 while True :
 	"""Select the Write/Read for the use
