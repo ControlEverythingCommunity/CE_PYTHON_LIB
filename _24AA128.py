@@ -13,7 +13,7 @@ bus = smbus.SMBus(1)
 # I2C address of the device
 _24AA128_DEFAULT_ADDRESS			= 0x50
 
-class 24AA128():
+class _24AA128():
 	def select_address(self):
 		"""Select the address where data has to be written (0-65535)"""
 		self.address = int(input("Enter the Address = "))
