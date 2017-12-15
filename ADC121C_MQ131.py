@@ -96,7 +96,7 @@ class ADC121C_MQ131():
 		return {'o3' : ppm}
 
 from ADC121C_MQ131 import ADC121C_MQ131
-ADC121C_mq131 = ADC121C_MQ131()
+adc121c_mq131 = ADC121C_MQ131()
 
 while True :
 	adc121c_mq131.data_config()
