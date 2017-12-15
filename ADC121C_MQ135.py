@@ -104,7 +104,7 @@ class ADC121C_MQ135():
         return {'nh3' : ppm}
 
 from ADC121C_MQ135 import ADC121C_MQ135
-ADC121C_mq135 = ADC121C_MQ135()
+adc121c_mq135 = ADC121C_MQ135()
 
 while True :
 	adc121c_mq135.data_config()
